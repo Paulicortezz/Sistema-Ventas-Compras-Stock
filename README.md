@@ -6,7 +6,8 @@ Título: Sistema en consola con JavaScript y SQLite
 
 Fecha: 06/05/2026  
 
-Descripción:
+Descripción
+
 Este proyecto implementa un sistema en modo consola para gestionar:
 - Ventas y compras
 - Stock
