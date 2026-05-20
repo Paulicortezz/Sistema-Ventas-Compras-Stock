@@ -21,5 +21,4 @@ Incluye manejo de facturas con:
 - Cálculo de impuestos
 - Cálculo de total****
 
-
-https://chatgpt.com/c/6a0e2f31-7444-83e9-9751-a8c9e1a2cc28
+  Chatbot Historias de Usuarios: https://chatgpt.com/c/6a0e2f31-7444-83e9-9751-a8c9e1a2cc28
