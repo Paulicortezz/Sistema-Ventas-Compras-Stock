@@ -1,6 +1,7 @@
 # Sistema-Ventas-Compras-Stock
 
 Nombre y Apellido: Paula  Cortez 
+
                    Steven Alconada
 
 Título: Sistema en consola con JavaScript y SQLite  
