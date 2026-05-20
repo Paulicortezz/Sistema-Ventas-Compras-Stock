@@ -1,21 +1,25 @@
-Sistema-Ventas-Compras-Stock
+#Sistema-Ventas-Compras-Stock
 
-Fecha
+#Fecha
 6/05/2026
 
-Integrantes
+#Integrantes
+
 Nombre del alumno: Paula Cortez
+
 Nombre del alumno: Steven Alconada 
 
-Materia
+#Materia
+
 Alfabetizacion Digital e Introduccion al Analisis Sistemico
 
-Profesor
+#Profesor
+
 Narciso Pérez
 
 Desarrollar un sistema en modo consola que permita gestionar de manera simple y eficiente las operaciones básicas de un comercio, aplicando conceptos de programación, estructuras de datos y lógica.
 
-Descripción
+#Descripción
 
 Este proyecto implementa un sistema en modo consola para gestionar:
 
@@ -23,7 +27,7 @@ Ventas y compras
 Existencias
 Informes
 
-Incluye manejo de facturas con:
+#Incluye manejo de facturas con:
 
 Carga de cabecera
 Carga de detalle
