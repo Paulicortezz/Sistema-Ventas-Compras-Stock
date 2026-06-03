@@ -5,7 +5,7 @@
 
 #Integrantes
 
-Nombre del alumno: Paula Cortez
+Nombre del alumno: Paula Macarena Cortez
 
 Nombre del alumno: Steven Alconada 
 
