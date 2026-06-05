@@ -13,6 +13,29 @@ El sistema permite administrar:
 
 ---
 
+
+## 📝 Materias
+
+- Alfabetizacion Digital e Introduccion al Analisis Sistemico
+
+---
+
+
+## 👨‍🏫 Profesor
+
+- Narciso Pérez
+
+---
+
+
+## 👥 Integrantes
+
+- Paula Cortez
+- Steven Alconada
+
+---
+
+
 ## 🚀 Funcionalidades
 
 ### 💰 Gestión de Ventas
@@ -59,12 +82,6 @@ A continuación se presenta el diagrama de clases del sistema:
 
 ---
 
-## 👥 Integrantes
-
-- Paula Cortez
-- Steven Alconada
-
----
 
 ## 📚 Objetivo Académico
 
@@ -78,7 +95,7 @@ Este proyecto tiene como objetivo aplicar conceptos de:
 
 ---
 
-Chatbot Historias de Usuarios: https://chatgpt.com/c/6a0e2f31-7444-83e9-9751-a8c9e1a2cc28 
+## Chatbot Historias de Usuarios: https://chatgpt.com/c/6a0e2f31-7444-83e9-9751-a8c9e1a2cc28 
 
 ### Cambios de prueba en rama-1
 
