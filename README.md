@@ -77,7 +77,7 @@ El proyecto fue desarrollado utilizando la metodología de **Historias de Usuari
 
 A continuación se presenta el diagrama de clases del sistema:
 
- ![Diagrama UML](UML.png)
+![Diagrama UML](UML.png)
 
 
 ---
