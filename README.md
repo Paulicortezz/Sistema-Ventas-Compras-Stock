@@ -1,40 +1,81 @@
-#Sistema-Ventas-Compras-Stock
+# 🛒 Sistema de Ventas, Compras y Stock
 
-#Fecha
-6/05/2026
+## 📖 Descripción
 
-#Integrantes
+Este proyecto implementa un sistema en modo consola desarrollado en **JavaScript**, aplicando conceptos de **Programación Orientada a Objetos (POO)** para gestionar procesos comerciales de una empresa.
 
-Nombre del alumno: Paula Cortez
+El sistema permite administrar:
 
-Nombre del alumno: Steven Alconada 
+- 🛍️ Ventas
+- 📦 Compras
+- 📊 Control de Stock
+- 📑 Reportes
 
-#Materia
+---
 
-Alfabetizacion Digital e Introduccion al Analisis Sistemico
+## 🚀 Funcionalidades
 
-#Profesor
+### 💰 Gestión de Ventas
+- Registro de ventas.
+- Generación de facturas.
+- Cálculo automático de subtotales e impuestos.
 
-Narciso Pérez
+### 🛒 Gestión de Compras
+- Registro de compras a proveedores.
+- Actualización automática del stock.
 
-Desarrollar un sistema en modo consola que permita gestionar de manera simple y eficiente las operaciones básicas de un comercio, aplicando conceptos de programación, estructuras de datos y lógica.
+### 📦 Gestión de Stock
+- Consulta de existencias.
+- Control de entradas y salidas de productos.
+- Actualización de inventario.
 
-#Descripción
+### 📈 Reportes
+- Reporte de ventas.
+- Reporte de compras.
+- Reporte de stock disponible.
 
-Este proyecto implementa un sistema en modo consola para gestionar:
+---
 
-Ventas y compras
-Existencias
-Informes
+## 🏗️ Tecnologías Utilizadas
 
-#Incluye manejo de facturas con:
+- JavaScript
+- Programación Orientada a Objetos (POO)
+- Git y GitHub
 
-Carga de cabecera
-Carga de detalle
-Cálculo de subtotal
-Pie de documento
-Cálculo de impuestos
-Cálculo de total
+---
+
+## 📋 Historias de Usuario
+
+El proyecto fue desarrollado utilizando la metodología de **Historias de Usuario**, definiendo funcionalidades a partir de las necesidades del usuario y criterios de aceptación.
+
+---
+
+## 📐 Diagrama UML
+
+A continuación se presenta el diagrama de clases del sistema:
+
+![Diagrama UML](uml.png)
+
+---
+
+## 👥 Integrantes
+
+- Paula Cortez
+- Steven Alconada
+
+---
+
+## 📚 Objetivo Académico
+
+Este proyecto tiene como objetivo aplicar conceptos de:
+
+- Programación Orientada a Objetos.
+- Modelado UML.
+- Historias de Usuario.
+- Control de versiones con Git y GitHub.
+- Trabajo colaborativo en equipo.
+
+---
 
 Chatbot Historias de Usuarios: https://chatgpt.com/c/6a0e2f31-7444-83e9-9751-a8c9e1a2cc28 
 
