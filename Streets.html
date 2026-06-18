@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Streetwear Web</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin:0;
+      /* Fondo */
+      background-image: url('Streetsssweb.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color:#ffffff;
+    }
+    header {
+      background: rgb(0, 0, 0);
+      color:#ffffff;
+      padding:20px;
+      text-align:center;
+      font-size:28px;
+      font-weight:bold;
+    }
+    .sidebar {
+      width:220px;
+      background: rgb(0, 0, 0);
+      height:100vh;
+      position:fixed;
+      top:0;
+      left:0;
+      padding-top:20px;
+    }
+    .sidebar button {
+      display:block;
+      width:90%;
+      margin:10px auto;
+      padding:12px;
+      background:#000000;
+      color:#ffffff;
+      border:none;
+      border-radius:5px;
+      font-size:16px;
+      cursor:pointer;
+      text-align:left;
+      transition:0.3s;
+    }
+    .sidebar button:hover { background:#07cf00; transform:scale(1.05); }
+    .content { margin-left:240px; padding:20px; }
+    .card {
+      background: rgb(41, 41, 41);
+      padding:20px;
+      margin-bottom:20px;
+      border-radius:8px;
+      box-shadow:0 4px 8px rgb(255, 255, 255);
+    }
+    h1 { color:#ffffff; }
+    table { width:100%; border-collapse:collapse; margin-top:10px; }
+    table, th, td { border:1px solid #ffffff; }
+    th { background:#000000; color:#ffffff; }
+    th, td { padding:10px; text-align:center; }
+    input { padding:8px; margin:5px 0; width:90%; border:1px solid #ffffff; border-radius:5px; }
+    button.action {
+      background:#000000; color:#ffffff; border:none;
+      padding:10px 15px; border-radius:5px; cursor:pointer; transition:0.3s;
+    }
+    button.action:hover { background:#2bff00; }
+  </style>
+</head>
+<body>
+  <header>Streetwear Web 🧢👕👟</header>
+
+  <div class="sidebar">
+    <button onclick="showPage('ventas')">🛍️ Ventas</button>
+    <button onclick="showPage('compras')">📦 Compras</button>
+    <button onclick="showPage('stock')">📊 Stock</button>
+    <button onclick="showPage('reportes')">📑 Reportes</button>
+  </div>
+
+  <div class="content">
+    <!-- Ventas -->
+    <div class="page" id="ventas" style="display:block;">
+      <h1>🛍️ Registrar Venta</h1>
+      <div class="card">
+        <input id="clienteVenta" placeholder="Cliente"><br>
+        <input id="prendaVenta" placeholder="Prenda"><br>
+        <input id="cantidadVenta" type="number" placeholder="Cantidad"><br>
+        <input id="precioVenta" type="number" placeholder="Precio Unitario"><br>
+        <button class="action" onclick="registrarVenta()">Registrar Venta</button>
+      </div>
+      <div class="card">
+        <h2>Historial de Ventas</h2>
+        <table id="tablaVentas">
+          <tr><th>Cliente</th><th>Prenda</th><th>Cantidad</th><th>Precio Unitario</th><th>Total</th></tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- Compras -->
+    <div class="page" id="compras" style="display:none;">
+      <h1>📦 Registrar Compra</h1>
+      <div class="card">
+        <input id="proveedorCompra" placeholder="Proveedor"><br>
+        <input id="prendaCompra" placeholder="Prenda"><br>
+        <input id="cantidadCompra" type="number" placeholder="Cantidad"><br>
+        <input id="costoCompra" type="number" placeholder="Costo Unitario"><br>
+        <button class="action" onclick="registrarCompra()">Registrar Compra</button>
+      </div>
+      <div class="card">
+        <h2>Historial de Compras</h2>
+        <table id="tablaCompras">
+          <tr><th>Proveedor</th><th>Prenda</th><th>Cantidad</th><th>Costo Unitario</th><th>Total</th></tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- Stock -->
+    <div class="page" id="stock" style="display:none;">
+      <h1>📊 Control de Stock</h1>
+      <div class="card">
+        <table id="tablaStock">
+          <tr><th>Prenda</th><th>Stock</th></tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- Reportes -->
+    <div class="page" id="reportes" style="display:none;">
+      <h1>📑 Reportes</h1>
+      <div class="card">
+        <p id="reporteVentas">Reporte de Ventas: $0</p>
+        <p id="reporteCompras">Reporte de Compras: $0</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let stock = {};
+    let totalVentas = 0;
+    let totalCompras = 0;
+
+    function showPage(pageId) {
+      document.querySelectorAll(".page").forEach(p => p.style.display = "none");
+      document.getElementById(pageId).style.display = "block";
+    }
+
+    function actualizarStock() {
+      const tabla = document.getElementById("tablaStock");
+      tabla.innerHTML = "<tr><th>Prenda</th><th>Stock</th></tr>";
+      for (let prenda in stock) {
+        const fila = document.createElement("tr");
+        fila.innerHTML = `<td>${prenda}</td><td>${stock[prenda]}</td>`;
+        tabla.appendChild(fila);
+      }
+    }
+
+    function registrarVenta() {
+      const cliente = document.getElementById("clienteVenta").value.trim();
+      const prenda = document.getElementById("prendaVenta").value.trim();
+      const cantidad = parseInt(document.getElementById("cantidadVenta").value);
+      const precio = parseFloat(document.getElementById("precioVenta").value);
+
+      if (!cliente || !prenda || isNaN(cantidad) || isNaN(precio)) {
+        alert("Completa todos los campos");
+        return;
+      }
+      if (!stock[prenda] || stock[prenda] < cantidad) {
+        alert("Stock insuficiente");
+        return;
+      }
+
+      stock[prenda] -= cantidad;
+      const total = cantidad * precio;
+      totalVentas += total;
+      actualizarStock();
+      document.getElementById("reporteVentas").innerText = "Reporte de Ventas: $" + totalVentas;
+
+      const fila = document.createElement("tr");
+      fila.innerHTML = `<td>${cliente}</td><td>${prenda}</td><td>${cantidad}</td><td>$${precio}</td><td>$${total}</td>`;
+      document.getElementById("tablaVentas").appendChild(fila);
+    }
+
+    function registrarCompra() {
+      const proveedor = document.getElementById("proveedorCompra").value.trim();
+      const prenda = document.getElementById("prendaCompra").value.trim();
+      const cantidad = parseInt(document.getElementById("cantidadCompra").value);
+      const costo = parseFloat(document.getElementById("costoCompra").value);
+
+      if (!proveedor || !prenda || isNaN(cantidad) || isNaN(costo)) {
+        alert("Completa todos los campos");
+        return;
+      }
+
+      if (!stock[prenda]) stock[prenda] = 0;
+      stock[prenda] += cantidad;
+      const total = cantidad * costo;
+      totalCompras += total;
+      actualizarStock();
+      document.getElementById("reporteCompras").innerText = "Reporte de Compras: $" + totalCompras;
+
+      const fila = document.createElement("tr");
+      fila.innerHTML = `<td>${proveedor}</td><td>${prenda}</td><td>${cantidad}</td><td>$${costo}</td><td>$${total}</td>`;
+      document.getElementById("tablaCompras").appendChild(fila);
+    }
+  </script>
+</body>
+</html>
