@@ -62,6 +62,7 @@ El sistema permite administrar:
 ## 🏗️ Tecnologías Utilizadas
 
 - JavaScript
+- Html
 - Programación Orientada a Objetos (POO)
 - Git y GitHub
 
