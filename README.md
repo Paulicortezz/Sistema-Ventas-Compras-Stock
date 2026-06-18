@@ -79,7 +79,8 @@ A continuación se presenta el diagrama de clases del sistema:
 
 ![Diagrama UML](UML.png)
 
-![Diagrama UML](ClasesUML.png)
+![Diagrama UML](<img width="811" height="470" alt="ClasesUML" src="https://github.com/user-attachments/assets/35bdcb61-df8b-4626-829b-a22330ffead5" />
+)
 
 
 ---
